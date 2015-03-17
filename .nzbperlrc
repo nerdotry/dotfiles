@@ -1,0 +1,7 @@
+# My nzbperlrc config file
+server=eu.news.astraweb.com
+user=
+pw=
+dlcreategrp
+conn=8
+noupdate

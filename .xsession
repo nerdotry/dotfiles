@@ -1,0 +1,39 @@
+# Load ssh agent
+eval `ssh-agent -s`
+export SSH_ASKPASS=ssh-askpass
+
+eval "`gnome-keyring-daemon`"
+export GNOME_KEYRING_PID
+export GNOME_KEYRING_SOCKET
+
+# Load programs
+#fbsetbg ~/Dropbox/Images/Wallpapers/Minecraft/18270-minecraft-creeper-stare.png&
+gnome-settings-daemon&
+fbsetbg /usr/share/backgrounds/Cacomixtle_Ubunteño_by_Carlos_and_Paula_Morales.jpg&
+xset fp+ ~/.fonts&
+xset fp rehash&
+xset r rate 180 40&
+xrdb -load ~/.Xdefaults&
+urxvt -geometry 129x59+1-16&
+urxvt -geometry 96x59-2-16&
+nm-applet&
+#guake&
+conky&
+~/.dropbox-dist/dropboxd&
+#/opt/copy/CopyAgent&
+
+# Start fluxbox in the background, and keep a note of the PID
+fluxbox -log "~/.fluxbox/log" &
+fbpid=$!&
+
+# Wait for fluxbox to exit
+wait $fbpid
+
+# Kill gnome keyring
+kill $GNOME_KEYRING_PID
+
+# Unload ssh keys and kill agent
+if [ "$SSH_AGENT_PID" ]; then
+    ssh-add -D < /dev/null
+    eval `ssh-agent -s -k`
+fi

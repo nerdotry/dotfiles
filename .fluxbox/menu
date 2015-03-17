@@ -1,0 +1,69 @@
+[begin] ()
+
+  [exec] (File Manager) {nautilus --no-desktop}
+  [exec] (Terminal) {urxvt}
+  #[exec] (Gnome Terminal) {gnome-terminal}
+  [exec] (Chrome) {google-chrome}
+  [exec] (Editor) {gnome-text-editor}
+  #[exec] (Sublime Text 2) {/opt/sublimetext2/sublime_text}
+  #[exec] (Vim) {gvim}
+
+  [submenu] (Net)
+    [exec] (Empathy) {empathy}
+    [exec] (Chrome) {google-chrome}
+    [exec] (Firefox) {firefox}
+    [exec] (Evolution) {evolution}
+    [exec] (Skype) {skype}
+    [exec] (VPN) {/usr/local/bin/qikea}
+    [exec] (VNC/RDP Client) {remmina}
+    [exec] (Virtualbox) {virtualbox}
+    [exec] (VNC Server) {/usr/lib/vino/vino-server}
+    [exec] (OpenXenManager) {/usr/bin/openxenmanager}
+    [exec] (System Monitor) {gnome-system-monitor}
+    [exec] (Apache Directory Studio) {/opt/apache-directory-studio/ApacheDirectoryStudio}
+    [exec] (Dropbox) {~/.dropbox-dist/dropboxd}
+  [end]
+
+  [submenu] (Multimedia)
+    [exec] (Ario) {ario}
+    [exec] (Sonata) {sonata}
+    [exec] (Rhythmbox) {rhythmbox}
+    [exec] (GIMP) {gimp}
+    [exec] (VLC) {vlc}
+	  [exec] (Google Music Uploader) {google-musicmanager}
+  [end]
+
+  [submenu] (Tools)
+    [exec] (Window name) {xprop WM_CLASS|cut -d \" -f 2|xmessage -file - -center}
+    [exec] (Gnome Control Centre) {gnome-control-center}
+    [exec] (Conky) {pkill conky; conky}
+    [exec] (Guake) {guake}
+    [exec] (xkill) {xkill}
+    [exec] (Screenshot) {scrot -d 5 screenshot-'%Y-%m-%d'.png -e 'mv $f ~/Dropbox/Images/Screenshots/'}
+    [exec] (Reload .Xdefaults) {xrdb -load ~/.Xdefaults}
+  [end]
+
+  [submenu] (Power)
+    [exec] (Shutdown) {sudo shutdown -Ph now}
+    [exec] (Reboot) {sudo shutdown -r now}
+    [exec] (Lock screen) {gnome-screensaver-command -l}
+  [end]
+
+  [submenu] (fluxbox menu)
+    [config] (Configure)
+    [submenu] (System Styles) {Choose a style...}
+          [stylesdir] (/usr/share/fluxbox/styles)
+    [end]
+    [submenu] (User Styles) {Choose a style...}
+          [stylesdir] (~/.fluxbox/styles)
+    [end]
+    [workspaces] (Workspace List)
+    [commanddialog] (Fluxbox Command)
+    [reconfig] (Reload config)
+    [restart] (Restart)
+    [exec] (About) {(fluxbox -v; fluxbox -info | sed 1d) 2> /dev/null | xmessage -file - -center}
+    [separator]
+    [exit] (Logout)
+  [end]
+
+[end]
