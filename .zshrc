@@ -1,7 +1,7 @@
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
-ZSH_THEME="z0mbix"
+ZSH_THEME="robbyrussell"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
