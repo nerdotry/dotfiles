@@ -27,7 +27,7 @@ alias rake="noglob rake"
 alias pwgen='pwgen -1 -B'
 alias serve_cwd='python -m SimpleHTTPServer'
 alias vim='gvim'
-aliac code='cd ~/Development/Go/src/github.com/nerdotry'
+alias code='cd ~/Development/Go/src/github.com/nerdotry'
 
 # Git stuff
 alias find_git_repos='find ~ -type d -name ".git" -print|egrep -v "$HOME/Library|$HOME/.Trash"'
