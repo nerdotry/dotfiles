@@ -24,13 +24,10 @@ alias pign='ping' # doh!
 alias running_vms='VBoxManage list runningvms|cut -f2 -d\"'
 alias ppv='puppet parser validate'
 alias rake="noglob rake"
-alias code='cd ~/Dropbox/Code'
-alias work='cd ~/Dropbox/Documents/Work/ComQi'
-alias dotfiles='cd ~/Dropbox/Configs/dotfiles'
-alias serenade='~/Dropbox/Projects/Serenade'
 alias pwgen='pwgen -1 -B'
 alias serve_cwd='python -m SimpleHTTPServer'
 alias vim='gvim'
+aliac code='cd ~/Development/Go/src/github.com/nerdotry'
 
 # Git stuff
 alias find_git_repos='find ~ -type d -name ".git" -print|egrep -v "$HOME/Library|$HOME/.Trash"'

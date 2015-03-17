@@ -36,6 +36,8 @@ export SAVEHIST=50000
 export OS=`uname -s`
 export UNISONLOCALHOSTNAME=`hostname -s`
 export LESS="-niSRX"
+export GOROOT=$HOME/Development/go
+export PATH=$PATH:$GOROOT/bin
 
 # Home directory bin?
 [ -d ~/bin ] && PATH=$PATH:~/bin
