@@ -26,7 +26,7 @@ alias ppv='puppet parser validate'
 alias rake="noglob rake"
 alias pwgen='pwgen -1 -B'
 alias serve_cwd='python -m SimpleHTTPServer'
-alias vim='gvim'
+alias vi='vim'
 alias code='cd ~/Development/Go/src/github.com/nerdotry'
 
 # Git stuff
